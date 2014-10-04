@@ -3,6 +3,7 @@
     "description": "light sensor bh1750 with raspberry pi",
     "author": "Miroslav Rúčka",
     "version": "0.0.1",
+    "main": "bh1750",
     "repository": {
         "type": "git",
         "url": "https://github.com/miroRucka/bh1750"
