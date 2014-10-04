@@ -1,6 +1,6 @@
 # bh1750
 
-light sensor BH1750 controlled by raspberry pi
+light sensor BH1750 controlled by raspberry pi based on i2c lib
 
 ## Usage
 
@@ -24,7 +24,7 @@ light sensor BH1750 controlled by raspberry pi
         length: 2
     }
 
-    ##### possible commands
+#### Possible commands
 
      // No active state
      0x00
