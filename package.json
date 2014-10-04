@@ -1,0 +1,23 @@
+{
+    "name": "bh1750",
+    "description": "light sensor bh1750 with raspberry pi",
+    "author": "Miroslav Rúčka",
+    "version": "0.0.1",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/miroRucka/bh1750"
+    },
+    "dependencies": {
+        "lodash": "2.4.1",
+        "i2c": "0.1.4"
+    },
+    "keywords": [
+        "raspberry, raspberry pi, light, sensor, bh1750"
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://mths.be/mit"
+        }
+    ]
+}
