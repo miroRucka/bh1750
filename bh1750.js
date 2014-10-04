@@ -4,7 +4,6 @@ var utils = require('./utils');
 
 var BH1750 = function (opts) {
     this.options = _.extend({}, {
-        debug: false,
         address: 0x23,
         device: '/dev/i2c-1',
         command: 0x10,
