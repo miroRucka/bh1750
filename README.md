@@ -7,7 +7,7 @@ light sensor BH1750 controlled by raspberry pi based on i2c lib
 ### Code
 
    ```javascript
-   var BH1750 = require('../bh1750');
+   var BH1750 = require('bh1750');
    var light = new BH1750({
         //options
    });
