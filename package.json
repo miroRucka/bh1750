@@ -10,7 +10,7 @@
     },
     "dependencies": {
         "lodash": "2.4.1",
-        "i2c": "0.1.4"
+        "i2c": "~0.2.1"
     },
     "keywords": [
         "raspberry, raspberry pi, light, sensor, bh1750"
