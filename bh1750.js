@@ -4,12 +4,25 @@ var i2c = require('i2c');
 var BH1750 = function (opts) {
     this.options = opts || {
         address: 0x23,
+        bus: 1,
         device: '/dev/i2c-1',
         command: 0x10,
         length: 2
     };
     this.verbose = this.options.verbose || false;
-    this.wire = new i2c(this.options.address, {device: this.options.device});
+    if (i2c.openSync) {
+        this.wire = i2c.openSync(this.options);
+     } else {
+        this.wire = new i2c(this.options.address, {device: this.options.device});
+     }
+    if (!this.wire.readBytes) {
+        this.wire.readBytes = function(offset, len, callback) {
+            this.writeSync([offset]);
+            this.read(len, function(err, res) {
+                callback(err, res);
+            });
+        }
+    }
 };
 
 BH1750.prototype.readLight = function (cb) {
