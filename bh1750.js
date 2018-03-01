@@ -1,26 +1,25 @@
 var console = require('console');
 var i2c = require('i2c');
-var _ = require('lodash');
-var utils = require('./utils');
 
 var BH1750 = function (opts) {
-    this.options = _.extend({}, {
+    this.options = opts || {
         address: 0x23,
         device: '/dev/i2c-1',
         command: 0x10,
         length: 2
-    }, opts);
+    };
     this.verbose = this.options.verbose || false;
     this.wire = new i2c(this.options.address, {device: this.options.device});
 };
 
 BH1750.prototype.readLight = function (cb) {
     var self = this;
-    if (!utils.exists(cb)) {
+    if (!cb) {
         throw new Error("Invalid param");
     }
     self.wire.readBytes(self.options.command, self.options.length, function (err, res) {
-        if (utils.exists(err)) {
+
+        if (err) {
             if (self.verbose)
                 console.error("error: I/O failure on BH1750 - command: ", self.options.command);
             return cb(err, null);
