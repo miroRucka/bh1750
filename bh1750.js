@@ -15,8 +15,7 @@ var BH1750 = function (opts) {
 BH1750.prototype.readLight = function (cb) {
     var self = this;
     if (!utils.exists(cb)) {
-        console.error("missing callback");
-        return;
+        throw new Error("Invalid param");
     }
     this.wire.writeByte(this.options.command, function (err) {
         if (utils.exists(err)) {
