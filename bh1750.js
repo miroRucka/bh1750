@@ -17,12 +17,11 @@ BH1750.prototype.readLight = function (cb) {
     if (!utils.exists(cb)) {
         throw new Error("Invalid param");
     }
-    this.wire.writeByte(this.options.command, function (err) {
+    self.wire.readBytes(self.options.command, self.options.length, function (err, res) {
         if (utils.exists(err)) {
-            console.error("error write byte to BH1750 - command: ", self.options.command);
+            console.error("error: I/O failure on BH1750 - command: ", self.options.command);
+            return;
         }
-    });
-    this.wire.readBytes(this.options.command, this.options.length, function (err, res) {
         var hi = res.readUInt8(0);
         var lo = res.readUInt8(1);
         var lux = ((hi << 8) + lo)/1.2;
