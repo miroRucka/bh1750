@@ -4,6 +4,9 @@
     "author": "Miroslav Rúčka, Jos Hendriks",
     "version": "0.0.1",
     "main": "bh1750",
+    "scripts": {
+        "test": "node example"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/circuitdb/bh1750"
