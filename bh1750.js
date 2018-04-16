@@ -9,6 +9,7 @@ var BH1750 = function (opts) {
         command: 0x10,
         length: 2
     }, opts);
+    this.verbose = this.options.verbose || false;
     this.wire = new i2c(this.options.address, {device: this.options.device});
 };
 
@@ -19,8 +20,9 @@ BH1750.prototype.readLight = function (cb) {
     }
     self.wire.readBytes(self.options.command, self.options.length, function (err, res) {
         if (utils.exists(err)) {
-            console.error("error: I/O failure on BH1750 - command: ", self.options.command);
-            return;
+            if (self.verbose)
+                console.error("error: I/O failure on BH1750 - command: ", self.options.command);
+            return cb(err, null);
         }
         var hi = res.readUInt8(0);
         var lo = res.readUInt8(1);
@@ -28,7 +30,7 @@ BH1750.prototype.readLight = function (cb) {
         if (self.options.command = 0x11) {
             lux = lux/2;
         }
-        cb.call(self, lux);
+        cb(null, lux);
     });
 };
 
