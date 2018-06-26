@@ -1,15 +1,15 @@
 {
-    "name": "bh1750-jh",
+    "name": "bh1750",
     "description": "light sensor bh1750 with raspberry pi",
     "author": "Miroslav Rúčka, Jos Hendriks",
-    "version": "0.0.1",
+    "version": "0.0.4",
     "main": "bh1750",
     "scripts": {
         "test": "node example"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/circuitdb/bh1750"
+        "url": "https://github.com/miroRucka/bh1750"
     },
     "dependencies": {
         "lodash": "2.4.1",
