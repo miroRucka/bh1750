@@ -12,10 +12,15 @@ light sensor BH1750 controlled by raspberry pi based on i2c lib
         //options
    });
 
-   light.readLight(function(value){
-        //..
+   light.readLight(function(err, value){
+       if (err) {
+           console.log("light error: " + err);
+           throw err;
+       } else {
+           console.log("light value is: ", value, "lx");
+       }
    });
-   ```
+ ```
 
 ### Options
 
