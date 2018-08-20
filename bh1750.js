@@ -1,3 +1,4 @@
+var console = require('console');
 var i2c = require('i2c');
 var _ = require('lodash');
 var utils = require('./utils');
