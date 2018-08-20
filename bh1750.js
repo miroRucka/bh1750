@@ -27,7 +27,7 @@ BH1750.prototype.readLight = function (cb) {
         var hi = res.readUInt8(0);
         var lo = res.readUInt8(1);
         var lux = ((hi << 8) + lo)/1.2;
-        if (self.options.command = 0x11) {
+        if (self.options.command === 0x11) {
             lux = lux/2;
         }
         cb(null, lux);
