@@ -25,8 +25,13 @@ BH1750.prototype.readLight = function (cb) {
                 console.error("error: I/O failure on BH1750 - command: ", self.options.command);
             return cb(err, null);
         }
-        var hi = res.readUInt8(0);
-        var lo = res.readUInt8(1);
+        var hi = res[0];
+        var lo = res[1];
+        if (Buffer.isBuffer(res)) {
+           hi = res.readUInt8(0);
+           lo = res.readUInt8(1);
+        }
+
         var lux = ((hi << 8) + lo)/1.2;
         if (self.options.command === 0x11) {
             lux = lux/2;
