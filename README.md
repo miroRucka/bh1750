@@ -2,7 +2,30 @@
 
 light sensor BH1750 controlled by raspberry pi based on i2c lib
 
+[![GitHub forks](https://img.shields.io/github/forks/miroRucka/bh1750.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/miroRucka/bh1750/network/)
+[![dependencies Status](https://david-dm.org/miroRucka/bh1750/status.svg)](https://david-dm.org/miroRucka/generic-sensor-lite)
+
+[![NPM](https://nodei.co/npm/bh1750.png)](https://npmjs.org/package/bh1750)
+
 ## Usage
+
+### Usage with Node.JS runtime
+
+```sh
+npm install
+npm test
+# light value is:  20 lx
+
+```
+
+### Usage with IoT.js runtime
+
+For constrained environments:
+
+```sh
+iotjs example/index.js 
+# light value is:  20.833333333333336 lx
+```
 
 ### Code
 
@@ -93,3 +116,4 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 * https://www.npmjs.com/package/bh1750
 * https://www.rohm.com/documents/11308/12926/CNA09016_sg.pdf
 * http://www.mouser.com/ds/2/348/bh1750fvi-e-186247.pdf
+* https://github.com/rzr/generic-sensors-lite
