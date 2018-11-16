@@ -13,8 +13,7 @@
     "url": "https://github.com/miroRucka/bh1750"
   },
   "dependencies": {
-    "i2c": "~0.2.1",
-    "lodash": "^4.17.10"
+    "i2c": "~0.2.1"
   },
   "keywords": [
     "raspberry, raspberry pi, light, sensor, bh1750, ambient-light, iotjs-module"
