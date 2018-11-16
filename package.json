@@ -17,7 +17,7 @@
     "lodash": "^4.17.10"
   },
   "keywords": [
-    "raspberry, raspberry pi, light, sensor, bh1750"
+    "raspberry, raspberry pi, light, sensor, bh1750, ambient-light, iotjs-module"
   ],
   "licenses": [
     {
