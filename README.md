@@ -3,7 +3,7 @@
 light sensor BH1750 controlled by raspberry pi based on i2c lib
 
 [![GitHub forks](https://img.shields.io/github/forks/miroRucka/bh1750.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/miroRucka/bh1750/network/)
-[![dependencies Status](https://david-dm.org/miroRucka/bh1750/status.svg)](https://david-dm.org/miroRucka/generic-sensor-lite)
+[![dependencies Status](https://david-dm.org/miroRucka/bh1750/status.svg)](https://david-dm.org/miroRucka/bh1750)
 
 [![NPM](https://nodei.co/npm/bh1750.png)](https://npmjs.org/package/bh1750)
 
