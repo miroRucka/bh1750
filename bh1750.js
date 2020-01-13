@@ -1,5 +1,11 @@
 var console = require('console');
-var i2c = require('i2c');
+
+var i2c = null;
+try {
+  i2c = require('@abandonware/i2c');
+} catch(err) {
+  i2c = require('i2c');
+}
 
 var BH1750 = function (opts) {
     this.options = opts || {
