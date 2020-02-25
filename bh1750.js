@@ -3,7 +3,7 @@ var console = require('console');
 var i2c = null;
 try {
   i2c = require('@abandonware/i2c');
-} catch(err) {
+} catch (err) {
   i2c = require('i2c');
 }
 
