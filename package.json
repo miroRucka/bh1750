@@ -6,7 +6,7 @@
   "main": "bh1750",
   "scripts": {
     "start": "node example",
-    "test": "node example",
+    "test": "eslint .",
     "lint": "eslint ."
   },
   "repository": {
