@@ -2,7 +2,7 @@
   "name": "bh1750",
   "description": "light sensor bh1750 with raspberry pi",
   "author": "Miroslav Rúčka, Jos Hendriks",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "bh1750",
   "scripts": {
     "start": "node example",
