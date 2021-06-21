@@ -14,7 +14,7 @@
     "url": "https://github.com/miroRucka/bh1750"
   },
   "dependencies": {
-    "@abandonware/i2c": "^0.2.4-1"
+    "@abandonware/i2c": "^0.2.4-3"
   },
   "keywords": [
     "raspberry, raspberry pi, light, sensor, bh1750, ambient-light, iotjs-module"
@@ -26,7 +26,7 @@
     }
   ],
   "devDependencies": {
-    "eslint": "^6.8.0"
+    "eslint": "^7.29.0"
   },
   "iotjs": {
     "version": ">=1.0"
